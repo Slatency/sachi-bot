@@ -101,4 +101,4 @@ bot.on("warn", (e) => console.warn(e));
 bot.on("debug", (e) => console.info(e));
 
 //make sure the bot is tidus bot
-bot.login(config.token);
+bot.login(process.env.BOT_TOKEN);
