@@ -2,7 +2,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-//Client ID: 455251974250823680 
 
 const mainChannel = "sachi-test";
 const rolesChannel = "roles";
