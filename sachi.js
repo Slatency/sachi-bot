@@ -1,6 +1,5 @@
 
 const Discord = require('discord.js');
-const config = require("./config.json");
 const bot = new Discord.Client();
 
 //Client ID: 455251974250823680 
@@ -29,7 +28,7 @@ bot.on('guildMemberAdd',(member) => {
 
 //creates an event listener for messages
 bot.on('message',(message) => {
-    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+    const args = message.content.slice(process.env.PREFIX.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 
     //ensures the bot only scans applicable messages, and deletes those that aren't
@@ -101,4 +100,4 @@ bot.on("warn", (e) => console.warn(e));
 bot.on("debug", (e) => console.info(e));
 
 //make sure the bot is tidus bot
-bot.login(config.token);
+bot.login(process.env.BOT_TOKEN);
